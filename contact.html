@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="media/alex-atienza-logo.png 500w">
+                    <img src="media/atienza-logo.png"
+                        alt="Alex Atienza Logo"
+                        width="200"
+                        height="50">
+                </picture>
+            </a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact Me</h1>
+        <form action="https://httpbin.org/get" method="get">
+            <fieldset>
+                <legend>Contact Form</legend>
+                <p>Please fill out the form below to get in touch with me.</p>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name_field" placeholder="Your Name">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email_field" placeholder="Your Email">
+                <br>
+                <label for="inquiry_field">Inquiry:</label>
+                <select name="inquiry" id="inquiry_field" multiple>
+                    <option>General</option>
+                    <option>Project</option>
+                    <option>Job</option>
+                    <option>Partnership</option>
+                    <option>Question</option>
+                </select>
+                <br>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message_field">Type a message.</textarea>
+                <br>
+                <input type="submit">
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Alex Atienza</p>
+    </footer>
+</body>
+</html>
