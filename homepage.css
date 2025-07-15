@@ -1,0 +1,97 @@
+@import url("main.css");
+body {
+    display: grid;
+    grid-template-columns: 64% 36%;
+    height: 100%;
+    margin: 0;
+    
+    /* Both halves of the page */
+    header,nav {
+        height: 100dvh;
+        text-align: center;
+    }
+
+    /* Left half of the page */
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgb(180, 180, 180);
+
+        h1,p {
+            margin: 0;
+
+            span {
+                display: inline-block;
+            }
+
+            span:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        h1 {
+            font-weight: var(--base-font-weight-large, var(--base-font-weight-fallback));
+            font-size: var(--base-font-size-large, var(--base-font-size-fallback));
+        }
+
+        p {
+            font-weight: var(--base-font-weight, var(--base-font-weight-fallback));
+            font-size: var(--base-font-size, var(--base-font-size-fallback));
+        }
+    }
+
+    /* Right half of the page */
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgb(100, 100, 100);
+
+        a {
+            display: block;
+            flex-grow: 1;
+            align-content: center;
+            text-decoration: none;
+            font-weight: var(--base-font-weight-large, var(--base-font-weight-fallback));
+            font-size: var(--base-font-size-large, var(--base-font-size-fallback));
+            background-color: rgb(100, 100, 100);
+
+            &:hover {
+                font-size: calc(var(--base-font-size-large, var(--base-font-size-fallback)) * 1.1);
+                background-color: rgb(150, 150, 150);
+            }
+        }
+    }
+}
+
+@media (max-width: 68em) {
+    body {
+        display: grid;
+        height: 100dvh;
+        grid-template-columns: initial;
+        grid-template-rows: 36% 64%;
+
+        /* Both halves of the page */
+        header,nav {
+            height: initial;
+            text-align: center;
+        }
+
+        /* Upper half of the page */
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgb(180, 180, 180);
+        }
+
+        /* Lower half of the page */
+        nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: rgb(100, 100, 100);
+        }
+    }
+}
