@@ -58,6 +58,7 @@ body {
             background-color: rgb(100, 100, 100);
 
             &:hover {
+                transition: font-size 0.5s ease-in-out;
                 font-size: calc(var(--base-font-size-large, var(--base-font-size-fallback)) * 1.1);
                 background-color: rgb(150, 150, 150);
             }
@@ -93,5 +94,25 @@ body {
             justify-content: space-evenly;
             background-color: rgb(100, 100, 100);
         }
+    }
+}
+
+@media (max-height: 35em) {
+    :root {
+        /* Font Settings */
+        --base-font-size: 14px;
+        --base-font-weight: 600;
+        --base-font-size-large: 40px;
+        --base-font-weight-large: 700;
+    }
+}
+
+@media (max-height: 25em) {
+    :root {
+        /* Font Settings */
+        --base-font-size: 13px;
+        --base-font-weight: 600;
+        --base-font-size-large: 20px;
+        --base-font-weight-large: 700;
     }
 }
