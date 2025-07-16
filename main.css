@@ -4,22 +4,26 @@
     --font-family: 'Onest', Helvetica, Arial, sans-serif;
     --font-display: fallback;
     --text-color: rgb(0, 0, 0);
-    --base-font-size: 20px;
-    --base-font-weight: 600;
-    --base-font-size-large: 96px;
-    --base-font-weight-large: 700;
-    --base-font-size-fallback: 24px;
-    --base-font-weight-fallback: 600;
+    --font-size: 20px;
+    --font-weight: 500;
+    --font-size-navigation: 20px;
+    --font-weight-navigation: 600;
+    --font-size-large: 96px;
+    --font-weight-large: 700;
+    --font-size-fallback: 24px;
+    --font-weight-fallback: 600;
 
     /* Transition Effects */
     --transition: font-size 0.5s ease-in-out,
             background-color 0.5s ease-in-out,
-            color 0.5s ease-in-out,
+            color 0.25s ease-in-out,
             font-color 0.15s ease-in-out,
             transform 0.5s ease-in-out;
 
     /* Color Settings */
-    --background-color: rgb(180, 180, 180);
+    --primary-color: rgb(180, 180, 180);
+    --secondary-color: rgb(100, 100, 100);
+    --tertiary-color: rgb(200, 200, 200);
 }
 
 * {
@@ -27,14 +31,4 @@
     font-display: var(--font-display);
     color: var(--text-color);
     transition: var(--transition);
-}
-
-@media (max-width: 68em) {
-    :root {
-        /* Font Settings */
-        --base-font-size: 16px;
-        --base-font-weight: 600;
-        --base-font-size-large: 64px;
-        --base-font-weight-large: 700;
-    }
 }
