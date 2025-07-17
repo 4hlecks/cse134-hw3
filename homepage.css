@@ -1,8 +1,6 @@
 @import url("main.css");
 body {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 64% 36%;
     grid-template-columns: 64% 36%;
     height: 100%;
     overflow: hidden;
@@ -20,16 +18,9 @@ body {
 
     /* Left half of the page */
     header {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        flex-direction: column;
+        justify-content: center;
         background-color: var(--primary-color);
 
         h1,p {
@@ -37,8 +28,7 @@ body {
             display: block;
             white-space: nowrap;
             overflow: hidden;
-            -o-text-overflow: ellipsis;
-               text-overflow: ellipsis;
+            text-overflow: ellipsis;
         }
 
         h1 {
@@ -54,33 +44,21 @@ body {
 
     /* Right half of the page */
     nav {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-pack: space-evenly;
-            -ms-flex-pack: space-evenly;
-                justify-content: space-evenly;
+        flex-direction: column;
+        justify-content: space-evenly;
         background-color: var(--secondary-color);
         
         a {
             display: block;
-            -webkit-box-flex: 1;
-                -ms-flex-positive: 1;
-                    flex-grow: 1;
-            -ms-flex-line-pack: center;
-                align-content: center;
+            flex-grow: 1;
+            align-content: center;
             text-decoration: none;
             font-weight: var(--font-weight-navigation, var(--font-weight-fallback));
             font-size: var(--font-size-navigation, var(--font-size-fallback));
             background-color: var(--secondary-color);
 
             &:hover {
-                -webkit-transition: font-size 0.5s ease-in-out;
-                -o-transition: font-size 0.5s ease-in-out;
                 transition: font-size 0.5s ease-in-out;
                 font-size: calc(var(--font-size-navigation, var(--font-size-fallback)) * 1.1);
                 color: var(--hover-color);
@@ -113,12 +91,9 @@ body {
     }
 
     body {
-        display: -ms-grid;
         display: grid;
         height: 100dvh;
-        -ms-grid-columns: initial;
         grid-template-columns: initial;
-        -ms-grid-rows: 36% 64%;
         grid-template-rows: 36% 64%;
 
         /* Both halves of the page */
@@ -129,41 +104,17 @@ body {
 
         /* Upper half of the page */
         header {
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
+            flex-direction: column;
+            justify-content: center;
         }
 
         /* Lower half of the page */
         nav {
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            -webkit-box-pack: space-evenly;
-                -ms-flex-pack: space-evenly;
-                    justify-content: space-evenly;
+            flex-direction: column;
+            justify-content: space-evenly;
         }
-    }
-
-    body > *:nth-child(1) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 1
-    }
-
-    body > *:nth-child(2) {
-        -ms-grid-row: 2;
-        -ms-grid-column: 1
     }
 }
 
