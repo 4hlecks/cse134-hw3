@@ -11,6 +11,7 @@ body {
     background-color: var(--primary-color);
     margin: 0;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 header {
@@ -50,8 +51,8 @@ nav {
     margin-bottom: 0;
 
     h1 {
-        padding-left: .5em;
-        padding-right: .5em;
+        padding-left: .5rem;
+        padding-right: .5rem;
 
         a {
             text-overflow: ellipsis;
@@ -83,8 +84,8 @@ nav {
                 text-decoration: none;
                 font-weight: var(--font-weight-navigation, var(--font-weight-fallback));
                 font-size: var(--font-size-navigation, var(--font-size-fallback));
-                padding-left: .5em;
-                padding-right: .5em;
+                padding-left: .5rem;
+                padding-right: .5rem;
             }
         }
     }
@@ -97,18 +98,23 @@ footer {
     background-color: var(--contrast-color);
 
     h1, p {
-        padding-left: .5em;
-        padding-right: .5em;
+        padding-left: .5rem;
+        padding-right: .5rem;
         color: var(--primary-color);
     }
 }
 
 main {
-    margin-left: auto;
-    margin-right: auto;
     grid-area: main;
-    width: 64rem;
-    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem; /* Height of Navigation Bar */
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
 
     h1 {
         font-weight: var(--font-weight-large, var(--base-font-weight-fallback));
@@ -126,9 +132,10 @@ article {
     align-items: center;
     justify-content: center;
     text-align: center;
-
-    margin: 2em;
-    padding: 2em;
+    width: 56rem;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    padding: 2rem;
 
     background-color: var(--secondary-color);
     border-radius: var(--container-border-radius);
@@ -139,10 +146,11 @@ article {
 .user-card {
     display: flex;
     flex-direction: row;
+    margin-bottom: 2rem;
 
     img {
         flex-grow: 1;
-        max-width: 15em;
+        max-width: 15rem;
         height: auto;
         border-radius: 50%;
     }
@@ -150,42 +158,43 @@ article {
     section {
         text-align: center;
         flex-grow: 2;
-        margin: 1em;
+        margin: 1rem;
     }
 }
 
 .maintenance-card {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 3em;
-    padding-bottom: 3em;
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     
     --font-size-large: 48px;
 
-    flex-direction: column;
     h1, p {
-        margin-top: .5em;
-        margin-bottom: .5em;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
     }
 
     a {
-        margin-top: 2em;
-        margin-bottom: .5em;
+        margin-top: 2rem;
+        margin-bottom: .5rem;
     }
 
     img {
-        max-width: 4em;
+        max-width: 4rem;
         height: auto;
     }
 
     a {
         display: block;
         border-radius: var(--button-border-radius);
-        padding: .5em 2em .5em 2em;
+        padding: .5rem 2rem .5rem 2rem;
         text-decoration: none;
-        color: var(--primary-color);
+        color: white;
         background-color: var(--contrast-color);
         font-weight: bold;
 
@@ -197,23 +206,23 @@ article {
 }
 
 /* Tablet Screen Size */
-@media (max-width: 64rem) {
+@media (max-width: 72rem) {
     main {
-            width: 48rem;
+        article {
+            width: 40rem;
+        }
     }
 }
 
 /* Phone Screen Size */
-@media (max-width: 48rem) {
-    body {
-        grid-template-areas:
-        "header header header"
-        "main main main"
-        "footer footer footer";
-
-    }
+@media (max-width: 56rem) {
     main {
-        width: auto;
+        padding-left: 0;
+        padding-right: 0;
+
+        article {
+            width: auto;
+        }
 
         section {
             flex-grow: 1;
