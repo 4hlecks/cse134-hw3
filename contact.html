@@ -4,55 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="stylesheet" href="subpage.css">
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html">
-                <picture>
-                    <source media="(min-width: 800px)" srcset="media/alex-atienza-logo.png 500w">
-                    <img src="media/atienza-logo.png"
-                        alt="Alex Atienza Logo"
-                        width="200"
-                        height="50">
-                </picture>
-            </a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="resume.html">Resume</a>
-            <a href="contact.html">Contact</a>
+            <h1><a href="index.html">Alex Atienza</a></h1>
+            <picture>
+                <source srcset="media/hamburger-menu.svg" type="image/svg">
+                <img src="media/hamburger-menu-fallback.png" alt="Menu Button" loading="lazy">
+            </picture>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
-        <h1>Contact Me</h1>
-        <form action="https://httpbin.org/get" method="get">
-            <fieldset>
-                <legend>Contact Form</legend>
-                <p>Please fill out the form below to get in touch with me.</p>
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name_field" placeholder="Your Name">
-                <br>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email_field" placeholder="Your Email">
-                <br>
-                <label for="inquiry_field">Inquiry:</label>
-                <select name="inquiry" id="inquiry_field" multiple>
-                    <option>General</option>
-                    <option>Project</option>
-                    <option>Job</option>
-                    <option>Partnership</option>
-                    <option>Question</option>
-                </select>
-                <br>
-                <label for="message">Message:</label>
-                <textarea name="message" id="message_field">Type a message.</textarea>
-                <br>
-                <input type="submit">
-            </fieldset>
-        </form>
+    <main class="maintenance-card">
+        <picture>
+                <source srcset="media/maintenance.webp" type="image/webp">
+                <img src="media/maintenance-fallback.png" alt="Headshot of Alex Atienza" loading="lazy">
+            </picture>
+            <h1>Not much going on here.</h1>
+            <p>Alex's robot minions are working expeditiously to finish this page.</p>
+        <a href="index.html">Home</a>
     </main>
-    <footer>
-        <p>&copy; 2025 Alex Atienza</p>
-    </footer>
 </body>
 </html>

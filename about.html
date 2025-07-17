@@ -5,126 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="stylesheet" href="subpage.css">
-    <style>
-        body {
-            background-color: var(--primary-color);
-            margin: 0;
-
-            --font-size: 20px;
-            --font-weight: 500;
-            --font-size-large: 56px;
-            --font-weight-large: 700;
-        }
-
-        nav {
-            *:hover {
-                color: var(--tertiary-color);
-            }
-
-            display: flex;
-            background-color: var(--secondary-color);
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding-left: 2em;
-            padding-right: 2em;
-
-            h1 {
-                a {
-                    display: block;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    text-decoration: none;
-                    font-weight: var(--font-weight-navigation, var(--font-weight-fallback));
-                    font-size: var(--font-size-navigation, var(--font-size-fallback));
-                }
-
-                &:hover {
-                    transform: scale(1.1);
-                }
-            }
-
-            ul {
-                display: flex;
-                list-style: none;
-
-                li {
-                    display: block;
-
-                    &:hover {
-                        transform: scale(1.1);
-                    }
-
-                    a {
-                        display: block;
-                        text-decoration: none;
-                        font-weight: var(--font-weight-navigation, var(--font-weight-fallback));
-                        font-size: var(--font-size-navigation, var(--font-size-fallback));
-                        padding-left: 1em;
-                        text-align: center;
-                    }
-                }
-            }
-        }
-
-        main {
-            display: flex;
-            justify-content: center;
-
-            h1 {
-                font-weight: var(--font-weight-large, var(--base-font-weight-fallback));
-                font-size: var(--font-size-large, var(--base-font-size-fallback));
-            }
-
-            p {
-                font-weight: var(--font-weight, var(--font-weight-fallback));
-                font-size: var(--font-size, var(--bfont-size-fallback));
-            }
-
-            section {
-                margin-top: 2em;
-                margin-left: 2vw;
-                margin-right: 2vw;
-                border-style: dashed;
-                width: 75%;
-                text-align: center;
-
-                article {
-                    display: flex;
-                    flex-direction: row;
-
-                    margin: 1em;
-                    padding: 1em;
-
-                    border-style: dashed;
-                    border-radius: 12px;
-
-                    img {
-                        max-width: 25%;
-                        height: auto;
-                        border-radius: 50%;
-                    }
-
-                }
-            }
-        }
-
-        @media (max-width: 48rem) {
-            :root {
-                /* Font Settings */
-                --base-font-size: 16px;
-                --base-font-weight: 600;
-                --base-font-size-large: 64px;
-                --base-font-weight-large: 700;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
         <nav>
             <h1><a href="index.html">Alex Atienza</a></h1>
+            <picture>
+                <source srcset="media/hamburger-menu.svg" type="image/svg">
+                <img src="media/hamburger-menu-fallback.png" alt="Menu Button" loading="lazy">
+            </picture>
             <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -134,14 +23,28 @@
         </nav>
     </header>
     <main>
-        <section>
-            <article class="user-card">
-                <img src="media/a-logo.png" alt="Alex's Logo">
-                <p>Here is some information about Alex Atienza.</p>
-            </article>
-            <h1>Page Title</h1>
-            <p>This is a paragraph about something.</p>
-        </section>
+        <article class="user-card">
+            <picture>
+                <source srcset="media/headshot-main.webp" type="image/webp">
+                <img src="media/headshot-fallback.jpg" alt="Headshot of Alex Atienza" loading="lazy">
+            </picture>
+            <section>
+                <p>Alex Atienza is a software engineer based in San Diego.</p>
+                <p>
+                    With roots in creative media,
+                    Alex has a passion for building innovative solutions that bridge technology and creativity.
+                </p>
+            </section>
+        </article>
+        <article class="maintenance-card">
+            <picture>
+                <source srcset="media/maintenance.webp" type="image/webp">
+                <img src="media/maintenance-fallback.png" alt="Headshot of Alex Atienza" loading="lazy">
+            </picture>
+            <h1>Not much going on here.</h1>
+            <p>Alex's robot minions are working expeditiously to finish this page.</p>
+            <a href="index.html">Home</a>
+        </article>
     </main>
 </body>
 </html>
