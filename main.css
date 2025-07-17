@@ -38,5 +38,7 @@
     font-family: var(--font-family);
     font-display: var(--font-display);
     color: var(--text-color);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
     transition: var(--transition);
 }
